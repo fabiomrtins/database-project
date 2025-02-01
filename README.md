@@ -19,7 +19,7 @@ Exercícios:
 1. Liste os produtos e o nome de seus fornecedores. (products / suppliers)
 2. Recupere os pedidos com os nomes dos clientes e dos funcionários responsáveis. (orders / customers / employees)
 3. Liste os produtos, suas categorias e o nome dos fornecedores. (products / categories / suppliers)
-4. Quantos pedidos cada cliente já fez? (orders / employees)
+4. Quantos pedidos cada cliente já fez? (orders / custoers)
 5. Valor total vendido por cada funcionário (considerando os pedidos já enviados). (orders / employees)
 6. Média de preços dos produtos por categoria. (products / categories)
 7. Quais os clientes que nunca fizeram pedidos? (customers / orders)
