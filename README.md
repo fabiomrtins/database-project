@@ -21,8 +21,8 @@ Exercícios:
 3. Liste os produtos, suas categorias e o nome dos fornecedores. (products / categories / suppliers)
 4. Quantos pedidos cada cliente já fez? (orders / employees)
 5. Valor total vendido por cada funcionário (considerando os pedidos já enviados). (orders / employees)
-6. Média de preços dos produtos por categoria. (products)
-7. Quais os clientes que nunca fizeram pedidos? (customers)
+6. Média de preços dos produtos por categoria. (products / categories)
+7. Quais os clientes que nunca fizeram pedidos? (customers / orders)
 # Authors
 
 - Jhonatas Rodrigues
