@@ -1,10 +1,9 @@
--- Recupere os pedidos com os nomes dos clientes e dos funcionários responsáveis. (orders / customers / employees)
+-- Liste os produtos, suas categorias e o nome dos fornecedores. (products / categories / suppliers)
 SELECT
-    orders.order_id,
-    customers.company_name AS customer_name,
-    employees.first_name || ' ' || employees.last_name AS employee_name,
-    orders.order_date
+    products.product_name,
+    categories.category_name,
+    suppliers.company_name AS supplier_name
 FROM
-    orders
-    INNER JOIN customers ON orders.customer_id = customers.customer_id
-    INNER JOIN employees ON orders.employee_id = employees.employee_id;
+    products
+    INNER JOIN categories ON products.category_id = categories.category_id
+    INNER JOIN suppliers ON products.supplier_id = suppliers.supplier_id;
