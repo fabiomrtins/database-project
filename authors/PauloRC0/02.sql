@@ -1,5 +1,5 @@
 SELECT
-a.product_name,b.first_name
+a.product_name,b.company_name
 FROM products a 
-INNER JOIN employees b
-ON a.supplier_id = b.employee_id
+INNER JOIN suppliers b
+ON a.product_id = b.supplier_id
