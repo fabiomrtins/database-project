@@ -1,5 +1,5 @@
 SELECT 
-ordem.shipped_name,
+ordem.ship_name,
 cliente.contact_name,
 funcionario.first_name
 FROM orders ordem
