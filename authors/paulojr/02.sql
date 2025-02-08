@@ -1,8 +1,5 @@
--- 2 
-select 
-produto.product_name, prestador.first_name 
-from
-products as produto
-inner join
-employees as prestador
-on produto.supplier_id = prestador.employee_id
+SELECT 
+produto.product_name, fornecedores.company_name
+FROM products produto
+INNER JOIN suppliers fornecedores
+ON produto.supplier_id = fornecedores.supplier_id;

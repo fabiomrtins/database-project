@@ -1,4 +1,4 @@
-select 
+SELECT
 * 
-from
+FROM
 products
