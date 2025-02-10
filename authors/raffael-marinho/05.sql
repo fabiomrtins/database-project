@@ -1,12 +1,16 @@
 -- Valor total vendido por cada funcionário (considerando os pedidos já enviados). (orders / employees)
 SELECT
-    employees.first_name || ' ' || employees.last_name AS employee_name,
-    SUM(orders.freight) AS total_sales
+    EMPLOYEES.first_name,
+    SUM(
+        ORDER_DETAILS.UNIT_PRICE * ORDER_DETAILS.QUANTITY * (1 - discount)
+    )
 FROM
-    orders
-    INNER JOIN employees ON orders.employee_id = employees.employee_id
+    ORDERS -- Tabela que guarda os pedidos realizados.
+    INNER JOIN ORDER_DETAILS ON ORDER_DETAILS.ORDER_ID = ORDERS.ORDER_ID -- Tabela que guarda o preço unitário, a quantidade vendida e o desconto ofertado. 
+    INNER JOIN EMPLOYEES ON EMPLOYEES.EMPLOYEE_ID = ORDERS.EMPLOYEE_ID
 WHERE
-    orders.shipped_date IS NOT NULL
+    ORDERS.SHIPPED_DATE IS NOT NULL -- Esta coluna é referente a data de envio do produto, se o produto foi enviado ela não pode ser vazia.
 GROUP BY
-    employees.employee_id,
-    employee_name;
+    EMPLOYEES.EMPLOYEE_ID
+ORDER BY
+    2 desc
