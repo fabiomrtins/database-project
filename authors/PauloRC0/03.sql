@@ -1,7 +1,15 @@
+--2. Recupere os pedidos com os nomes dos clientes e dos funcionários responsáveis. (orders / customers / employees)
+
 SELECT
-a.ship_name,b.contact_name,c.first_name
-FROM orders a
-INNER JOIN customers b
-ON a.customer_id = b.customer_id
-INNER JOIN employees c
-ON a.employee_id = c.employee_id
+
+o.order_id,c.contact_name,f.first_name
+
+FROM orders as o
+
+INNER JOIN customers as c
+
+ON o.customer_id = c.customer_id
+
+INNER JOIN employees as f
+
+ON o.employee_id = f.employee_id

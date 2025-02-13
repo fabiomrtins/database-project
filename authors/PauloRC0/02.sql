@@ -1,5 +1,11 @@
+--1.Liste os produtos e o nome de seus fornecedores. (products / suppliers)
+
 SELECT
-a.product_name,b.company_name
-FROM products a 
-INNER JOIN suppliers b
-ON a.supplier_id = b.supplier_id
+
+p.product_name,f.company_name
+
+FROM products as p 
+
+INNER JOIN suppliers as f
+
+ON p.supplier_id = f.supplier_id
